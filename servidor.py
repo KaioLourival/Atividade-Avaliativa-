@@ -1,8 +1,8 @@
-# importa o módulo socket
+#importa o módulo socket
 from socket import *
 import sys # necessário para encerrar o programa
 
-# cria o socket TCP (orientado à conexão)
+# cria o socket TCP (orientado à conexão
 serverSocket = socket(AF_INET, SOCK_STREAM)
 
 # prepara o socket do servidor
@@ -36,7 +36,7 @@ while True:
         connectionSocket.close()
 
     except IOError:
-        # envia mensagem de erro 404 se o arquivo não for encontrado
+        #envia mensagem de erro 404 se o arquivo não for encontrado
         header_404 = "HTTP/1.1 404 Not Found\r\n\r\n"
         connectionSocket.send(header_404.encode())
         connectionSocket.send("<html><head></head><body><h1>404 Not Found</h1></body></html>".encode())
